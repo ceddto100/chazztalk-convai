@@ -1,0 +1,198 @@
+:root {
+    --primary-light: #e0f7ff;
+    --primary: #146dc0;
+    --primary-dark: #0062cc;
+    --gradient-light: linear-gradient(135deg, #7cc2ff, #4da9ff);
+    --gradient-dark: linear-gradient(135deg, #0062cc, #003d80);
+    --text-light: #333;
+    --text-dark: #fff;
+    --bg-light: #f5f9ff;
+    --bg-dark: #121e2c;
+    --card-light: #fff;
+    --card-dark: #1c2e45;
+    --success: #4CAF50;
+    --warning: #ff9800;
+    --error: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background: var(--gradient-light);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+body.dark-mode h1 {
+    background: var(--gradient-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.controls {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    background: var(--gradient-light);
+    color: white;
+    box-shadow: 0 4px 15px rgba(77, 169, 255, 0.3);
+}
+
+body.dark-mode button {
+    background: var(--gradient-dark);
+    box-shadow: 0 4px 15px rgba(0, 98, 204, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(77, 169, 255, 0.4);
+}
+
+body.dark-mode button:hover {
+    box-shadow: 0 6px 20px rgba(0, 98, 204, 0.5);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.status-container {
+    font-size: 1.1rem;
+    background-color: var(--card-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+body.dark-mode .status-container {
+    background-color: var(--card-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.status-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.connected {
+    background-color: var(--success);
+}
+
+.listening {
+    background-color: var(--primary);
+}
+
+.speaking {
+    background-color: var(--warning);
+}
+
+.disconnected {
+    background-color: var(--error);
+}
+
+.benefits-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.benefit-card {
+    background-color: var(--card-light);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+body.dark-mode .benefit-card {
+    background-color: var(--card-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

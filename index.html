@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ChazTalk Conversational AI</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <div class="container">
+            <header>
+                <h1>ChazTalk Solutions</h1>
+                <p>Experience the future of human-computer interaction with our advanced AI voice technology</p>
+            </header>
+            
+            <div class="controls">
+                <button id="startButton">Start Conversation</button>
+                <button id="stopButton" disabled>Stop Conversation</button>
+            </div>
+            
+            <div class="status-container">
+                <div class="status-item">
+                    <span class="status-indicator" id="connectionIndicator"></span>
+                    <p>Status: <span id="connectionStatus">Disconnected</span></p>
+                </div>
+                <div class="status-item">
+                    <span class="status-indicator" id="agentIndicator" class="listening"></span>
+                    <p>Agent is <span id="agentStatus">listening</span></p>
+                </div>
+            </div>
+            
+            <section>
+                <h2>Why Choose ChazTalk Solutions</h2>
+                <p>Our conversational AI platform transforms how you interact with technology</p>
+                
+                <div class="benefits-section">
+                    <div class="benefit-card">
+                        <h3>Natural Conversations</h3>
+                        <p>Experience truly human-like interactions with our advanced AI that understands context, responds naturally, and maintains conversational flow.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Hands-Free Operation</h3>
+                        <p>Free yourself from typing and clicking. Get information, complete tasks, and control your digital world using just your voice.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Emotional Intelligence</h3>
+                        <p>Our AI recognizes emotional cues in your voice and responds appropriately, creating more meaningful and satisfying interactions.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Multilingual Support</h3>
+                        <p>Break language barriers with our AI that speaks and understands multiple languages fluently, enabling global communication.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>24/7 Availability</h3>
+                        <p>Get instant responses and assistance anytime, with an AI assistant that's always ready to help without fatigue or delay.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Seamless Integration</h3>
+                        <p>Easily incorporate our conversational AI into your existing systems, websites, or applications with our comprehensive API.</p>
+                    </div>
+                </div>
+            </section>
+            <elevenlabs-convai agent-id="k3VhVsz8Zs4hEyB209Br"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+            
+            <footer>
+                <p>Powered by ElevenLabs Voice Technology | &copy; 2025 ChazTalk Solutions</p>
+            </footer>
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
